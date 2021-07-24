@@ -1,0 +1,65 @@
+<footer class="footer mt-auto bg-dark h-card text-white">
+  <data class="u-url" href='{{ "/" | relative_url }}'></data>
+  <div class="container pt-4">
+    <div class="row">
+      <div class="col-lg-4 d-flex justify-content-center align-items-center">
+        <img class="img-fluid" src="/assets/img/logo.svg" alt="">
+      </div>
+      <div class="col-lg-8">
+        <p class="fs-3 text-old text-white text-shadow ">FOOD & Drinks</p>
+        <p>{{ site.description | escape }}</p>
+        {%- if site.bootstrap.social_links -%}
+        <section class="d-flex pb-2">
+          {%- include social.html -%}
+        </section>
+        {%- endif -%}
+        {%- if site.author %}
+        <ul class="contact-list list-unstyled">
+          {% if site.author.name -%}
+          <li class="p-name">{{ site.author.name | escape }}</li>
+          {% endif -%}
+          {% if site.author.email -%}
+          <li><a class="u-email text-white social" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          {%- endif %}
+        </ul>
+        {%- endif %}
+        <p class="feed-subscribe pb-4">
+          <a class="btn btn-outline-light text-white social" target="blank"  href="{{ 'feed.xml' | relative_url }}">
+            <i class="bi bi-rss-fill"></i>
+            <span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © {{ site.time | date: '%Y' }}  Copyright: {{ site.name | default: site.title }}. Desarrollado por:
+    <a class="text-white social fw-bold" target="blank" href="https://emprende.dev/">Emprende en la Web</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+  integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+  window.onscroll = function () { scrollFunction() };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("img-brand").style.width = "60px";
+      document.getElementById("mask-box").style.background = "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))";
+    } else {
+      document.getElementById("img-brand").style.width = "200px";
+      document.getElementById("mask-box").style.background = "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0))";
+
+    }
+  }
+
+</script>

@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+.italics {
+    font-family: "Satisfy", cursive;
+}
+
+#mask-box {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+
+.text-old {
+    font-family: "Bree Serif", serif;
+}
+.img-gold {
+    width: 200px;
+}
+.text-gold {
+    color: #ffcd7c;
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 2px black;
+}
+
+.bg-out:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.fs-0 {
+    font-size: 45px;
+}
+
+.border-gold {
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(to right, #ffcd7c, #ffcd7c);
+    border-image-slice: 1;
+}
+
+#img-brand {
+    width: 200px;
+}
+
+#img-brand {
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.menu-item > .a-item {
+    color: $yellow-700 !important;
+}
+.menu-item > .a-item:hover {
+    color: $yellow-600 !important;
+}
+
+.category-title {
+    color: $yellow-700 !important;
+}
+.text-justify {
+    text-align: justify;
+}
+hr,
+.hrcolor {
+    height: 2px;
+    border: 0;
+    color: $yellow-600;
+    background-color: $yellow-600;
+    opacity: 1;
+}
+
+.hrcolor2 {
+    border: 1px solid #cc9a06 !important;
+    opacity: 1;
+    margin-bottom: 20px;
+}
+
+.decoration-page {
+    width: 150px !important;
+}
+
+
+.nav-link {
+    text-decoration: none;
+    background-image: linear-gradient($yellow-700, #ffcd7c);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition-property: background-size !important;
+    transition-duration: 4s;
+    transition-delay: 2s;
+}
+.nav-link:hover,
+.nav-link:focus {
+    background-size: 100% 2px;
+}
+
+.social:hover{
+  color: $yellow-600  !important;
+  border-color: $yellow-600  !important;
+}
+
+.active{
+    color: $yellow-600  !important;
+    background-size: 100% 2px;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media only screen and (max-width: 576px) {
+    .carrusel-text {
+        font-size: 10px !important;
+        margin: 0px;
+        width: auto;
+    }
+}
+
+.navbar .nav-link {
+    color: #fff !important;
+}
+// Medium devices (tablets, 768px and up)
+@media only screen and (max-width: 768px) {
+    .menu-item {
+        font-size: 14px !important;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media only screen and (max-width: 992px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media only screen and (max-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media only screen and (max-width: 1400px) {
+}

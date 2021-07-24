@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<div class="post">
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <div class="row">
+    {% for category in site.categories %}
+    <h3 class="text-old fw-bold category-title">{{ category[0] }}</h3>
+    {% for post in category[1] %}
+    <div class="col-sm-4 mb-4">
+      <div class="card mb-4 shadow h-100">
+        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+          <img src="{{ post.image | escape }}" class="img-fluid" />
+          <a href="{{ post.url | relative_url }}">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <div class="row ">
+            <div class="col-8">
+              <h5 class="card-title fw-bold menu-item"> <a class="a-item" href="{{ post.url | relative_url }}">{{
+                  post.title | escape }}</a></h5>
+            </div>
+            <div class="col-4 text-end fw-bold text-danger fs-5 ">
+              <p class="menu-item">{{ post.price | escape }}</p>
+            </div>
+          </div>
+          <p class="card-text text-justify">
+            {{ post.description | escape }}
+          </p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="d-flex justify-content-center">
+      <img class="decoration-page animate__animated animate__bounce animate__delay-2s" src="/assets/img/decorations2.png">
+    </div>
+    <hr class="hrcolor2 animate__animated animate__fadeInLeft animate__delay-2s">
+    {% endfor %}
+  </div>
+</div>

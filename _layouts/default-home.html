@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body class="d-flex flex-column  vh-100">
+
+    {%- include header.html -%}
+
+      <!--Main layout-->
+  <main>
+    <div class="container-fluid">
+
+      <!--Section: Main info-->
+      <section class="mt-5 wow fadeIn">
+      {{ content }}
+      </section>
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+</html>
